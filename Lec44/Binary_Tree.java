@@ -223,7 +223,7 @@ public class Binary_Tree {
 
 	}
 
-	public void LevelOrderLevelwise1() {
+	public void LevelOrderLevelwise1() { //Same
 
 		Queue<Node> q = new LinkedList<>();
 		q.add(this.root);
@@ -246,7 +246,7 @@ public class Binary_Tree {
 
 	}
 
-	public void LevelOrderLevelwise2() {
+	public void LevelOrderLevelwise2() { //Same
 
 		Queue<Node> p = new LinkedList<>();
 		Queue<Node> h = new LinkedList<>();
@@ -308,7 +308,7 @@ public class Binary_Tree {
 
 	}
 
-	public int diameterOfBinaryTree(Node node) {
+	public int diameterOfBinaryTree(Node node) { //longest path between two nodes
 
 		if (node == null) {
 			return 0;
@@ -316,7 +316,7 @@ public class Binary_Tree {
 
 		int ld = diameterOfBinaryTree(node.left);
 		int rd = diameterOfBinaryTree(node.right);
-		int sd = ht(node.left) + ht(node.right) + 2;
+		int sd = ht(node.left) + ht(node.right) + 2; //ht is height and when passes null gives -1
 		return Math.max(sd, Math.max(ld, rd));
 
 	}
